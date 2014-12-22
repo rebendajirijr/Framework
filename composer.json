@@ -1,0 +1,12 @@
+{
+    "name": "jr/framework",
+    "license": "MIT License",
+    "authors": [
+        {
+            "name": "Jiri Rebenda",
+            "email": "jiri.rebenda@htmldriven.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}

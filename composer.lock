@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b639a4f9cd587d6064485b115c3010b2",
+    "hash": "6b84305a84f58985341af35c757061c5",
     "packages": [
         {
             "name": "goodby/csv",

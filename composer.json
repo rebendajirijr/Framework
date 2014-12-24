@@ -1,5 +1,6 @@
 {
     "name": "jr/framework",
+	"description": "Common application framework based on Nette Framework.",
     "license": "MIT",
     "authors": [
         {

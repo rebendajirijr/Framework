@@ -6,7 +6,7 @@ use JR\Framework\Testing\TestCase,
 	JR\Framework\Math\Helpers,
 	Tester\Assert;
 
-require_once __DIR__ . '/../bootstrap.php';
+require_once __DIR__ . '/../../../bootstrap.php';
 
 /**
  * Math helpers utility class tests.

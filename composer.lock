@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "6b84305a84f58985341af35c757061c5",
+    "hash": "88947b10905a675eee99be7d76a0739a",
     "packages": [
         {
             "name": "goodby/csv",
@@ -129,12 +129,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/application.git",
-                "reference": "1c35d65f81bbca1c94798cb17e35b7f3321e6199"
+                "reference": "81c3a48846daed8caa474c42144d152a109359e5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/application/zipball/1c35d65f81bbca1c94798cb17e35b7f3321e6199",
-                "reference": "1c35d65f81bbca1c94798cb17e35b7f3321e6199",
+                "url": "https://api.github.com/repos/nette/application/zipball/81c3a48846daed8caa474c42144d152a109359e5",
+                "reference": "81c3a48846daed8caa474c42144d152a109359e5",
                 "shasum": ""
             },
             "require": {
@@ -187,7 +187,7 @@
             ],
             "description": "Nette Application MVC Component",
             "homepage": "http://nette.org",
-            "time": "2014-12-21 21:21:43"
+            "time": "2014-12-30 01:51:50"
         },
         {
             "name": "nette/bootstrap",
@@ -264,12 +264,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/caching.git",
-                "reference": "32790b9aed94331035af7faab445316e73830315"
+                "reference": "6093d0fc2f647315a38f3a48de32caa997b5c4f7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/caching/zipball/32790b9aed94331035af7faab445316e73830315",
-                "reference": "32790b9aed94331035af7faab445316e73830315",
+                "url": "https://api.github.com/repos/nette/caching/zipball/6093d0fc2f647315a38f3a48de32caa997b5c4f7",
+                "reference": "6093d0fc2f647315a38f3a48de32caa997b5c4f7",
                 "shasum": ""
             },
             "require": {
@@ -313,7 +313,7 @@
             ],
             "description": "Nette Caching Component",
             "homepage": "http://nette.org",
-            "time": "2014-12-21 19:06:31"
+            "time": "2014-12-31 11:53:24"
         },
         {
             "name": "nette/component-model",
@@ -602,12 +602,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/forms.git",
-                "reference": "1fbb99822f9072bdeb24a9108c29a19cdc72287c"
+                "reference": "1c0241c68a8f2eb729023f4683bcf7da1debc607"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/forms/zipball/1fbb99822f9072bdeb24a9108c29a19cdc72287c",
-                "reference": "1fbb99822f9072bdeb24a9108c29a19cdc72287c",
+                "url": "https://api.github.com/repos/nette/forms/zipball/1c0241c68a8f2eb729023f4683bcf7da1debc607",
+                "reference": "1c0241c68a8f2eb729023f4683bcf7da1debc607",
                 "shasum": ""
             },
             "require": {
@@ -653,7 +653,7 @@
             ],
             "description": "Nette Forms: greatly facilitates web forms",
             "homepage": "http://nette.org",
-            "time": "2014-12-20 14:55:42"
+            "time": "2014-12-30 01:40:04"
         },
         {
             "name": "nette/http",
@@ -661,12 +661,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/http.git",
-                "reference": "cc33a3888c41742d5ae1e74c8a2c00cde2a4c70d"
+                "reference": "4f2a6e3759fc775e1e331991c87a1925f65ce123"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/http/zipball/cc33a3888c41742d5ae1e74c8a2c00cde2a4c70d",
-                "reference": "cc33a3888c41742d5ae1e74c8a2c00cde2a4c70d",
+                "url": "https://api.github.com/repos/nette/http/zipball/4f2a6e3759fc775e1e331991c87a1925f65ce123",
+                "reference": "4f2a6e3759fc775e1e331991c87a1925f65ce123",
                 "shasum": ""
             },
             "require": {
@@ -711,7 +711,7 @@
             ],
             "description": "Nette HTTP Component",
             "homepage": "http://nette.org",
-            "time": "2014-12-21 18:59:08"
+            "time": "2014-12-30 17:05:04"
         },
         {
             "name": "nette/mail",
@@ -1184,6 +1184,62 @@
             "time": "2014-11-25 13:13:43"
         },
         {
+            "name": "nette/tester",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nette/tester.git",
+                "reference": "76153d57bd1175142e4fa800e8782a7449d11136"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nette/tester/zipball/76153d57bd1175142e4fa800e8782a7449d11136",
+                "reference": "76153d57bd1175142e4fa800e8782a7449d11136",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "bin": [
+                "Tester/tester"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.3-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "Tester/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause",
+                "GPL-2.0",
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "David Grudl",
+                    "homepage": "http://davidgrudl.com"
+                },
+                {
+                    "name": "Nette Community",
+                    "homepage": "http://nette.org/contributors"
+                }
+            ],
+            "description": "An easy-to-use PHP unit testing framework.",
+            "homepage": "http://nette.org",
+            "keywords": [
+                "nette",
+                "testing",
+                "unit"
+            ],
+            "time": "2014-12-18 12:08:52"
+        },
+        {
             "name": "nette/tokenizer",
             "version": "dev-master",
             "source": {
@@ -1243,12 +1299,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/utils.git",
-                "reference": "773fe07ed3051c815f06bd0cd1e684c22a5d09b7"
+                "reference": "50dbab6989f280d1433a360dc8cde8c470c85793"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/utils/zipball/773fe07ed3051c815f06bd0cd1e684c22a5d09b7",
-                "reference": "773fe07ed3051c815f06bd0cd1e684c22a5d09b7",
+                "url": "https://api.github.com/repos/nette/utils/zipball/50dbab6989f280d1433a360dc8cde8c470c85793",
+                "reference": "50dbab6989f280d1433a360dc8cde8c470c85793",
                 "shasum": ""
             },
             "require": {
@@ -1295,7 +1351,7 @@
             ],
             "description": "Nette Utility Classes",
             "homepage": "http://nette.org",
-            "time": "2014-12-21 23:40:43"
+            "time": "2014-12-31 15:23:58"
         },
         {
             "name": "tracy/tracy",
@@ -1357,64 +1413,7 @@
             "time": "2014-12-15 02:31:59"
         }
     ],
-    "packages-dev": [
-        {
-            "name": "nette/tester",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/nette/tester.git",
-                "reference": "76153d57bd1175142e4fa800e8782a7449d11136"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/nette/tester/zipball/76153d57bd1175142e4fa800e8782a7449d11136",
-                "reference": "76153d57bd1175142e4fa800e8782a7449d11136",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "bin": [
-                "Tester/tester"
-            ],
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.3-dev"
-                }
-            },
-            "autoload": {
-                "classmap": [
-                    "Tester/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause",
-                "GPL-2.0",
-                "GPL-3.0"
-            ],
-            "authors": [
-                {
-                    "name": "David Grudl",
-                    "homepage": "http://davidgrudl.com"
-                },
-                {
-                    "name": "Nette Community",
-                    "homepage": "http://nette.org/contributors"
-                }
-            ],
-            "description": "An easy-to-use PHP unit testing framework.",
-            "homepage": "http://nette.org",
-            "keywords": [
-                "nette",
-                "testing",
-                "unit"
-            ],
-            "time": "2014-12-18 12:08:52"
-        }
-    ],
+    "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {

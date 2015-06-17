@@ -1,0 +1,12 @@
+<nav class="navbar navbar-default navbar-static-top black">
+	<div class="container">
+		{control headerControl}
+		<div class="navbar-collapse collapse" n:if="count($itemControl->getItems()) > 0">
+			<ul class="nav navbar-nav">
+				<li n:class="count($itemControl->getItems()) > 0 ? dropdown" n:foreach="$items as $itemControl">
+					{control $itemControl}
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>

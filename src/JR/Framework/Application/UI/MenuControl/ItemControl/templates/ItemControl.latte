@@ -1,0 +1,6 @@
+<a href="{$control->getLink()}" class="dropdown-toggle" data-toggle="dropdown" role="button">{$control->getTitle()}</a>
+<ul class="dropdown-menu" role="menu" n:if="count($control->components) > 0">
+	<li n:foreach="$item->components as $itemControl">
+		{control $itemControl}
+	</li>
+</ul>

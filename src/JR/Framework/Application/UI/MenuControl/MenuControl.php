@@ -16,24 +16,9 @@ class MenuControl extends Control
 	/** @var IHeaderControlFactory */
 	private $headerControlFactory;
 	
-	/**
-	 * @param Item[] $items
-	 */	
-	public function __construct(array $items = array())
-	{
-		parent::__construct();
-		
-		$this->items = $items;
-	}
-	
-	public function setHeaderControlFactory(IHeaderControlFactory $headerControlFactory)
+	public function injectHeaderControlFactory(IHeaderControlFactory $headerControlFactory)
 	{
 		$this->headerControlFactory = $headerControlFactory;
-	}
-	
-	public function setItemControlFactory(IItemControlFactory $itemControlFactory)
-	{
-		$this->itemControlFactory = $itemControlFactory;
 	}
 	
 	/**

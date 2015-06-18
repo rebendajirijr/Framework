@@ -1,6 +1,6 @@
 <?php
 
-namespace JR\Framework\Application\UI\MenuControl\HeaderControl\Content;
+namespace JR\Framework\Application\UI\MenuControl\HeaderControl\HeaderContent;
 
 use Nette;
 use Nette\Http\Url;
@@ -26,7 +26,7 @@ class AnchorHeaderContent extends Nette\Object implements IHeaderContent
 	private $html;
 	
 	/** @var array */
-	private $anchorAttributes = array();
+	private $anchorAttributes = [];
 	
 	/**
 	 * @param string|Url $url
@@ -65,7 +65,7 @@ class AnchorHeaderContent extends Nette\Object implements IHeaderContent
 	 */
 	public function setAnchorAttributes(array $anchorAttributes = [])
 	{
-		$anchorAttributes = static::$defaultAnchorAttributes + $anchorAttributes;
+		$anchorAttributes = array_merge(static::$defaultAnchorAttributes, $anchorAttributes);
 		$this->anchorAttributes = $anchorAttributes;
 		return $this;
 	}
@@ -85,7 +85,7 @@ class AnchorHeaderContent extends Nette\Object implements IHeaderContent
 	{
 		$el = Html::el('a')
 			->href($this->url)
-			->addAtributes($this->anchorAttributes)
+			->addAttributes($this->anchorAttributes)
 			->setHtml($this->html);
 		return $el;
 	}

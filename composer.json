@@ -10,7 +10,7 @@
     ],
     "minimum-stability": "dev",
     "require": {
-		"php": ">= 5.3.7",
+		"php": ">= 5.4.4",
 		"nette/nette": "~2.3@dev",
 		"nette/tester": "~1.0",
 		"joseki/leanmapper-extension": "~1.0",

@@ -1,6 +1,6 @@
 <?php
 
-namespace JR\Framework\Application\UI\MenuControl\HeaderControl\Content;
+namespace JR\Framework\Application\UI\MenuControl\HeaderControl\HeaderContent;
 
 use Nette\Http\Url;
 use Nette\Utils\Html;
@@ -27,6 +27,9 @@ class AnchorImageHeaderContent extends AnchorHeaderContent
 		parent::__construct($url, $this->createImageHtml(), $anchorAttributes);
 	}
 	
+	/**
+	 * @return Html
+	 */
 	protected function createImageHtml()
 	{
 		return Html::el('img')->src($this->src);

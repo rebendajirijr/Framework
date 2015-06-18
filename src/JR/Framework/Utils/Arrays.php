@@ -1,6 +1,6 @@
 <?php
 
-namespace C4P\Framework\Utils;
+namespace JR\Framework\Utils;
 
 use Nette;
 

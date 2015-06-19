@@ -18,6 +18,8 @@
 		"tharos/leanmapper": "dev-master"
 	},
 	"autoload": {
-		"classmap": ["src/"]
+		"psr-0": {
+			"JR\\Framework": "src/"
+		}
 	}
 }

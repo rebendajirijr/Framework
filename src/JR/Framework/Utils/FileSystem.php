@@ -21,7 +21,7 @@ class FileSystem extends Nette\Object
 	public static function findAllSubdirectories($dir)
 	{
 		if (!is_dir($dir)) {
-			throw new DirectoryNotFoundException("Direcotry '$dir' not found.");
+			throw new DirectoryNotFoundException("Directory '$dir' not found.");
 		}
 		return array_keys(iterator_to_array(Finder::findDirectories('*')->in($dir)));
 	}

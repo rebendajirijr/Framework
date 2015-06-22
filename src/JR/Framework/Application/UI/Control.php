@@ -5,6 +5,7 @@ namespace JR\Framework\Application\UI;
 use Nette\Application\UI\Control as NetteControl;
 use Nette\Reflection\ClassType;
 use Nette\FileNotFoundException;
+use JR\Framework\Localization\TTranslatorAware;
 
 /**
  * Description of Control.
@@ -13,6 +14,8 @@ use Nette\FileNotFoundException;
  */
 abstract class Control extends NetteControl
 {
+	use TTranslatorAware;
+	
 	/** @var string */
 	private $templateFile;
 	

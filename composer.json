@@ -15,11 +15,13 @@
 		"nette/tester": "~1.0",
 		"joseki/leanmapper-extension": "~1.0",
 		"goodby/csv": "dev-master",
-		"tharos/leanmapper": "dev-master"
+		"tharos/leanmapper": "dev-master",
+        "ipub/flash-messages": "dev-master"
 	},
 	"autoload": {
 		"psr-0": {
 			"JR\\Framework\\": "src/"
 		}
-	}
+	},
+	"type": "shared-package"
 }

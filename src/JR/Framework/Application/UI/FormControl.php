@@ -38,6 +38,16 @@ class FormControl extends Control
 		return $this->formFactory;
 	}
 	
+	/*
+	 * @inheritdoc
+	 */
+	protected function createTemplate()
+	{
+		$template = parent::createTemplate();
+		$template->form = $template->_form = $this->getForm();
+		return $template;
+	}
+	
 	/**
 	 * Creates underlying form component instance.
 	 * 
@@ -50,16 +60,6 @@ class FormControl extends Control
 			$form->setTranslator($this->getTranslator());
 		}
 		return $form;
-	}
-	
-	/*
-	 * @inheritdoc
-	 */
-	protected function createTemplate()
-	{
-		$template = parent::createTemplate();
-		$template->form = $template->_form = $this->getForm();
-		return $template;
 	}
 	
 	/**

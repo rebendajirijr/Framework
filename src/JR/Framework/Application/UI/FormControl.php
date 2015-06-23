@@ -55,11 +55,11 @@ class FormControl extends Control
 	/*
 	 * @inheritdoc
 	 */
-	public function render()
+	protected function createTemplate()
 	{
-		$template = $this->template;
+		$template = parent::createTemplate();
 		$template->form = $template->_form = $this->getForm();
-		return $template->render();
+		return $template;
 	}
 	
 	/**

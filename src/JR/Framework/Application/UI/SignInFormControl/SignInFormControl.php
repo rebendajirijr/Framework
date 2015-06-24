@@ -57,6 +57,8 @@ class SignInFormControl extends FormControl
 		$form->addText('email', 'controls.signInFormControl.email.label', NULL, 255)
 			->setRequired('controls.signInFormControl.email.required')
 			->addRule(Form::EMAIL, 'controls.signInFormControl.email.invalid');
+		$form->addPassword('password', 'controls.signInFormControl.password.label', NULL, 32)
+			->setRequired('controls.signInFormControl.password.required');
 		$form->addSubmit('submitSignIn', 'controls.signInFormControl.submitSignIn.caption')
 			->onClick[] = $this->submitSignInClicked;
 		return $form;

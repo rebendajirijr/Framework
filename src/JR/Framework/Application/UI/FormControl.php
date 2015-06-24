@@ -26,6 +26,14 @@ class FormControl extends Control
 	}
 	
 	/**
+	 * @return Form
+	 */
+	public function getForm()
+	{
+		return $this['form'];
+	}
+	
+	/**
 	 * Returns associated factory of underlying form.
 	 * 
 	 * @return IFormFactory
@@ -60,13 +68,5 @@ class FormControl extends Control
 			$form->setTranslator($this->getTranslator());
 		}
 		return $form;
-	}
-	
-	/**
-	 * @return Form
-	 */
-	protected function getForm()
-	{
-		return $this['form'];
 	}
 }

@@ -13,4 +13,10 @@ use JR\Framework\Localization\TTranslatorAware;
 abstract class Presenter extends NettePresenter
 {
 	use TTranslatorAware;
+	
+	/**
+	 * @persistent
+	 * @var string
+	 */
+	public $locale;
 }

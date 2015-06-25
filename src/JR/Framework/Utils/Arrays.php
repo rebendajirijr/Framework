@@ -3,6 +3,7 @@
 namespace JR\Framework\Utils;
 
 use Nette;
+use JR\Framework\InvalidArgumentException;
 
 /**
  * Array utility class.
@@ -48,5 +49,26 @@ class Arrays extends Nette\Object
 			$lastArray = &$lastArray[$input[$i]];
 		}
 		return $ret;
+	}
+	
+	/**
+	 * Tries to get value from $array by $key and sets that value as object property.
+	 * 
+	 * @param object $object
+	 * @param array $array
+	 * @param string $key
+	 * @param bool $need
+	 * @return void
+	 * @throws InvalidArgumentException If given $key does not exist in $array.
+	 */
+	public static function setObjectPropertyValueByValueFromArray($object, array $array, $key, $need = TRUE)
+	{
+		if (!array_key_exists($key, $array)) {
+			if ($need) {
+				throw new InvalidArgumentException("Missing '$key' in given array.");
+			}
+			return;
+		}
+		$object->key = $arra[$key];
 	}
 }

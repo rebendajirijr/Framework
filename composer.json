@@ -20,6 +20,9 @@
 	"autoload": {
 		"psr-0": {
 			"JR\\Framework\\": "src/"
-		}
+		},
+		"classmap": [
+			"src/JR/Framework/Model/exceptions.php"
+		]
 	}
 }

@@ -5,6 +5,7 @@ namespace JR\Framework\Application\UI\SignInFormControl;
 use Nette\Forms\Controls\SubmitButton;
 use Nette\Security\IAuthenticator;
 use Nette\Security\AuthenticationException;
+use Nette\Security\User;
 use JR\Framework\Application\UI\Form;
 use JR\Framework\Application\UI\FormControl;
 
@@ -15,16 +16,20 @@ use JR\Framework\Application\UI\FormControl;
  */
 class SignInFormControl extends FormControl
 {
+	/** @var User */
+	private $user;
+	
 	/** @var IAuthenticator */
 	private $authenticator;
 	
 	/**
 	 * @param IAuthenticator $authenticator
 	 */
-	public function __construct(IAuthenticator $authenticator)
+	public function __construct(User $user, IAuthenticator $authenticator)
 	{
 		parent::__construct();
 		
+		$this->user = $user;
 		$this->authenticator = $authenticator;
 	}
 	
@@ -38,12 +43,14 @@ class SignInFormControl extends FormControl
 		$values = $form->getValues();
 		
 		try {
-			$this->authenticator->authenticate([
-				'email' => $values->email,
-				'password' => $values->password,
-			]);
+			$this->user->login(
+				$this->authenticator->authenticate([
+					'email' => $values->email,
+					'password' => $values->password,
+				])	
+			);
 		} catch (AuthenticationException $e) {
-			$form->addError('controls.signInFormControl.invalidCredentialsErrorMessage');
+			$form->addError($this->getTranslator()->translate('controls.signInFormControl.invalidCredentialsErrorMessage'));
 			return FALSE;
 		}
 	}

@@ -4,7 +4,7 @@
 		<div class="navbar-collapse collapse" n:if="count($control->getItems()) > 0">
 			<ul class="nav navbar-nav">
 				<li n:class="count($control->getItems()) > 0 ? dropdown" n:foreach="$control->getItems() as $itemControl">
-					{control itemControl}
+					{control $itemControl}
 				</li>
 			</ul>
 		</div>

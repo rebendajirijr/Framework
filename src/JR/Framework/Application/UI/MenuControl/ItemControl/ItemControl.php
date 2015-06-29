@@ -5,9 +5,11 @@ namespace JR\Framework\Application\UI\MenuControl\ItemControl;
 use Nette;
 use Nette\Http\Url;
 use Nette\Utils\Html;
+use Nette\Utils\Validators;
 use Nette\InvalidStateException;
 use Nette\ComponentModel\IComponent;
 use JR\Framework\Application\UI\Control;
+use JR\Framework\InvalidArgumentException;
 
 /**
  * Description of ItemControl.
@@ -66,6 +68,11 @@ class ItemControl extends Control
 	 */
 	public function setLink($link)
 	{
+		if (is_string($link)) {
+			Validators::assert($link, 'url');
+		} else if (!($link instanceof Url || $link instanceof Html)) {
+			throw new InvalidArgumentException("Link must be string or instance of Nette\Http\Url or Nette\Utils\Html, instance of '" . gettype($link) . "' given.");
+		}
 		$this->link = $link;
 		return $this;
 	}

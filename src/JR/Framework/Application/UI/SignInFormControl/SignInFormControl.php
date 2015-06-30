@@ -50,7 +50,7 @@ class SignInFormControl extends FormControl
 				])	
 			);
 		} catch (AuthenticationException $e) {
-			$form->addError($this->getTranslator()->translate('controls.signInFormControl.invalidCredentialsErrorMessage'));
+			$form->addError($this->getTranslator()->translate('framework.controls.signInFormControl.invalidCredentialsErrorMessage'));
 			return FALSE;
 		}
 	}
@@ -61,12 +61,12 @@ class SignInFormControl extends FormControl
 	protected function createComponentForm($name)
 	{
 		$form = parent::createComponentForm($name);
-		$form->addText('email', 'controls.signInFormControl.email.label', NULL, 255)
-			->setRequired('controls.signInFormControl.email.required')
-			->addRule(Form::EMAIL, 'controls.signInFormControl.email.invalid');
-		$form->addPassword('password', 'controls.signInFormControl.password.label', NULL, 32)
-			->setRequired('controls.signInFormControl.password.required');
-		$form->addSubmit('submitSignIn', 'controls.signInFormControl.submitSignIn.caption')
+		$form->addText('email', 'framework.controls.signInFormControl.email.label', NULL, 255)
+			->setRequired('framework.controls.signInFormControl.email.required')
+			->addRule(Form::EMAIL, 'framework.controls.signInFormControl.email.invalid');
+		$form->addPassword('password', 'framework.controls.signInFormControl.password.label', NULL, 32)
+			->setRequired('framework.controls.signInFormControl.password.required');
+		$form->addSubmit('submitSignIn', 'framework.controls.signInFormControl.submitSignIn.caption')
 			->onClick[] = $this->submitSignInClicked;
 		return $form;
 	}

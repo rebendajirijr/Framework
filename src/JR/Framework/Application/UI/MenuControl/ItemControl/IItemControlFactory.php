@@ -10,7 +10,8 @@ namespace JR\Framework\Application\UI\MenuControl\ItemControl;
 interface IItemControlFactory
 {
 	/**
+	 * @param Item $item
 	 * @return ItemControl
 	 */
-	function create();
+	function create(Item $item);
 }

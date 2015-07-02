@@ -7,17 +7,15 @@ use Nette\Http\Url;
 use Nette\Utils\Html;
 use Nette\Utils\Validators;
 use JR\Framework\InvalidArgumentException;
+use JR\Framework\Application\UI\MenuControl\BaseItem;
 
 /**
  * Description of Item.
  *
  * @author RebendaJiri <jiri.rebenda@htmldriven.com>
  */
-class Item extends Nette\Object
-{
-	/** @var string */
-	private $name;
-	
+class Item extends BaseItem
+{	
 	/** @var string|Html */
 	private $title;
 	
@@ -27,14 +25,13 @@ class Item extends Nette\Object
 	/** @var bool */
 	private $enabled = TRUE;
 	
-	private $order;
-	
 	/** @var Item[] */
 	private $children = [];
 	
 	public function __construct($name, $title, $link, $enabled = TRUE)
 	{
-		$this->setName($name);
+		parent::__construct($name);
+		
 		$this->setTitle($title);
 		$this->setLink($link);
 		
@@ -43,25 +40,6 @@ class Item extends Nette\Object
 		} else {
 			$this->disable();
 		}
-	}
-	
-	/**
-	 * @param string $name
-	 * @return self
-	 */
-	public function setName($name)
-	{
-		Validators::assert($name, 'string');
-		$this->name = $name;
-		return $this;
-	}
-	
-	/**
-	 * @return string
-	 */
-	public function getName()
-	{
-		return $this->name;
 	}
 	
 	/**
@@ -130,24 +108,6 @@ class Item extends Nette\Object
 	public function isEnabled()
 	{
 		return $this->enabled;
-	}
-	
-	/**
-	 * @param int $order
-	 * @return self
-	 */
-	public function setOrder($order)
-	{
-		$this->order = (int) $order;
-		return $this;
-	}
-	
-	/**
-	 * @return int
-	 */
-	public function getOrder()
-	{
-		return $this->order;
 	}
 	
 	/**

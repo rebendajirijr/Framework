@@ -23,11 +23,11 @@ class MenuControl extends Control
 	
 	/**
 	 * @param bool $recursive
-	 * @return ItemControl
+	 * @return Control[]
 	 */
-	public function getItems($recursive = FALSE)
+	public function getControls($recursive = FALSE)
 	{
-		return $this->getComponents($recursive, 'JR\Framework\Application\UI\MenuControl\ItemControl\ItemControl');
+		return $this->getComponents($recursive, 'JR\Framework\Application\UI\MenuControl\Control');
 	}
 	
 	/**

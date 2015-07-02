@@ -1,12 +1,10 @@
 <nav class="navbar navbar-default navbar-static-top black">
 	<div class="container">
 		{if $control->getComponent('headerControl', FALSE)}{control headerControl}{/if}
-		<div class="navbar-collapse collapse" n:if="count($control->getItems()) > 0">
-			<ul class="nav navbar-nav">
-				<li n:class="count($control->getItems()) > 0 ? dropdown, !$itemControl->getItem()->isEnabled() ? disabled" n:foreach="$control->getItems() as $itemControl">
-					{control $itemControl}
-				</li>
-			</ul>
+		<div class="navbar-collapse collapse" n:if="count($control->getControls()) > 0">
+			{foreach $control->getControls() as $ctrl}
+				{control $ctrl}
+			{/foreach}
 		</div>
 	</div>
 </nav>

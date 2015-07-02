@@ -4,7 +4,7 @@ namespace JR\Framework\Application\UI\MenuControl\ItemControl;
 
 use Nette\InvalidStateException;
 use Nette\ComponentModel\IComponent;
-use JR\Framework\Application\UI\Control;
+use JR\Framework\Application\UI\MenuControl\Control;
 
 /**
  * Description of ItemControl.

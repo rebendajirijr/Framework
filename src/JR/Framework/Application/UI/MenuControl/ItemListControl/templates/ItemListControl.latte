@@ -1,0 +1,5 @@
+<ul class="nav navbar-nav">
+	<li n:class="count($control->getItemControls()) > 0 ? dropdown, !$itemControl->getItem()->isEnabled() ? disabled" n:foreach="$control->getItemControls() as $itemControl">
+		{control $itemControl}
+	</li>
+</ul>

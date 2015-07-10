@@ -1,4 +1,4 @@
-<a href="{$control->getItem()->getLink()}" class="dropdown-toggle" data-toggle="dropdown" role="button">
+<a href="{$control->getItem()->getLink()}" {if count($control->components) > 0}class="dropdown-toggle" data-toggle="dropdown"{/if} role="button">
 	{var $title = $template->translate($control->getItem()->getTitle())}
 	{? $title = \Nette\Utils\Html::el()->setHtml($title)}
 	{$title}

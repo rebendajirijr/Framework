@@ -1,0 +1,15 @@
+<ol class="breadcrumb" n:if="count($control->getItems())" n:inner-foreach="$control->getItems() as $item">
+	{var $link = $item->getLink()}
+	{var $title = $item->getTitle()}
+	{if !$iterator->isLast()}
+		<li>
+			{if $link instanceof \Nette\Utils\Html}
+				{$link}
+			{else}
+				<a href="{$link}">{$title}</a>
+			{/if}
+		</li>
+	{else}
+		<li class="active">{$title}</li>
+	{/if}
+</ol>

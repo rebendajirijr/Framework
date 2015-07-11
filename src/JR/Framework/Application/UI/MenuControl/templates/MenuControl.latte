@@ -1,7 +1,7 @@
 <nav class="navbar navbar-default navbar-static-top">
 	<div class="container">
 		{if $control->getComponent('headerControl', FALSE)}{control headerControl}{/if}
-		<div class="navbar-collapse collapse" n:if="count($control->getControls()) > 0">
+		<div class="collapse navbar-collapse" n:if="count($control->getControls()) > 0" id="{$control->getName()}">
 			{foreach $control->getControls() as $ctrl}
 				{control $ctrl}
 			{/foreach}

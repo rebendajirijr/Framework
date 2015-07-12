@@ -27,6 +27,17 @@ class PaginatorControl extends Control
 	/** @var bool */
 	private $useAjax = TRUE;
 	
+	public function __construct()
+	{
+		parent::__construct();
+		
+		$this->onShowPage[] = function (PaginatorControl $me) {
+			if ($me->getPresenter()->isAjax()) {
+				$me->redrawControl();
+			}
+		};
+	}
+	
 	/*
 	 * @inheritdoc
 	 */

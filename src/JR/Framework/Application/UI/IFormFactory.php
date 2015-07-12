@@ -7,17 +7,16 @@ use Nette\ComponentModel\IContainer;
 /**
  * Declares method for creating form.
  * 
- * @author	RebendaJiri
- * @package JR\Framework
+ * @author RebendaJiri <jiri.rebenda@htmldriven.com>
  */
 interface IFormFactory
 {
 	/**
 	 * Creates form.
 	 * 
-	 * @param IContainer $parent
-	 * @param string|NULL $name
+	 * @param IContainer
+	 * @param string|NULL
 	 * @return Form
 	 */
-	function createForm(IContainer $parent = NULL, $name = NULL);
+	function create(IContainer $parent = NULL, $name = NULL);
 }

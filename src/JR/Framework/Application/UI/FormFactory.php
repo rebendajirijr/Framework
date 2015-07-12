@@ -8,15 +8,14 @@ use Nette,
 /**
  * Description of FormFactory
  *
- * @author	RebendaJiri
- * @package JR\Framework
+ * @author RebendaJiri <jiri.rebenda@htmldriven.com>
  */
 class FormFactory extends Nette\Object implements IFormFactory
 {
 	/*
 	 * @inheritdoc
 	 */
-	public function createForm(IContainer $parent = NULL, $name = NULL)
+	public function create(IContainer $parent = NULL, $name = NULL)
 	{
 		$form = new Form($parent, $name);
 		return $form;

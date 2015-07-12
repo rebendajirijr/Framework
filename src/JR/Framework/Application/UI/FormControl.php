@@ -63,7 +63,7 @@ class FormControl extends Control
 	 */
 	protected function createComponentForm($name)
 	{
-		$form = $this->getFormFactory()->createForm($this, $name);
+		$form = $this->getFormFactory()->create($this, $name);
 		if ($this->getTranslator() !== NULL) {
 			$form->setTranslator($this->getTranslator());
 		}

@@ -3,6 +3,7 @@
 namespace JR\Framework\Utils;
 
 use Nette;
+use Nette\StaticClassException;
 use JR\Framework\InvalidArgumentException;
 
 /**
@@ -13,6 +14,11 @@ use JR\Framework\InvalidArgumentException;
  */
 class Arrays extends Nette\Object
 {
+	public function __construct()
+	{
+		throw new StaticClassException();
+	}
+	
 	/**
 	 * Search for given values in array and replaces them with specified value.
 	 * 
@@ -54,10 +60,10 @@ class Arrays extends Nette\Object
 	/**
 	 * Tries to get value from $array by $key and sets that value as object property.
 	 * 
-	 * @param object $object
-	 * @param array $array
-	 * @param string $key
-	 * @param bool $need
+	 * @param object
+	 * @param array
+	 * @param string
+	 * @param bool
 	 * @return void
 	 * @throws InvalidArgumentException If given $key does not exist in $array.
 	 */
@@ -70,5 +76,36 @@ class Arrays extends Nette\Object
 			return;
 		}
 		$object->key = $arra[$key];
+	}
+	
+	/**
+	 * @param array
+	 * @param callable function ($key, $value) {}
+	 * @return array
+	 */
+	public static function changeKeys(array $array, callable $callback)
+	{
+		$result = [];
+		foreach ($array as $key => $value) {
+			$newKey = call_user_func($callback, $key, $value);
+			
+			$result[$newKey] = $value;
+			unset($array[$key]);
+		}		
+		return $result;
+	}
+	
+	/**
+	 * @param array
+	 * @param callable
+	 * @return array
+	 */
+	public static function changeValues(array $array, callable $callback)
+	{
+		$result = [];
+		foreach ($array as $key => $value) {
+			$result[$key] = call_user_func($callback, $key, $value);
+		}
+		return $result;
 	}
 }

@@ -16,13 +16,12 @@ class FormControl extends Control
 	/**
 	 * Sets factory for underlying form.
 	 * 
-	 * @param IFormFactory $formFactory
-	 * @return self
+	 * @param IFormFactory
+	 * @return void
 	 */
-	public function setFormFactory(IFormFactory $formFactory)
+	public function injectFormFactory(IFormFactory $formFactory)
 	{
 		$this->formFactory = $formFactory;
-		return $this;
 	}
 	
 	/**
@@ -40,9 +39,9 @@ class FormControl extends Control
 	 */
 	protected function getFormFactory()
 	{
-		if ($this->formFactory === NULL) {
-			$this->formFactory = new FormFactory();
-		}
+//		if ($this->formFactory === NULL) {
+//			$this->formFactory = new FormFactory();
+//		}
 		return $this->formFactory;
 	}
 	

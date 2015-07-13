@@ -18,5 +18,5 @@ interface IFormFactory
 	 * @param string|NULL
 	 * @return Form
 	 */
-	function create(IContainer $parent = NULL, $name = NULL);
+	function create();
 }

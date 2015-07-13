@@ -15,9 +15,9 @@ class FormFactory extends Nette\Object implements IFormFactory
 	/*
 	 * @inheritdoc
 	 */
-	public function create(IContainer $parent = NULL, $name = NULL)
+	public function create()
 	{
-		$form = new Form($parent, $name);
+		$form = new Form();
 		return $form;
 	}
 }

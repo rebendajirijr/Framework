@@ -75,7 +75,7 @@ class Arrays extends Nette\Object
 			}
 			return;
 		}
-		$object->key = $arra[$key];
+		$object->$key = $array[$key];
 	}
 	
 	/**

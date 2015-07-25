@@ -4,14 +4,14 @@
 	{if $paginator->isFirst()}
 	<li class="disabled"><a>&laquo; {_'framework.controls.paginatorControl.previousPage'}</a></li>
 	{else}
-	<li><a href="{link showPage, 'page' => $paginator->page - 1}" rel="prev" n:class="$useAjax ? ajax">« Previous</a><li>
+	<li><a href="{link showPage!, 'page' => $paginator->page - 1}" rel="prev" n:class="$useAjax ? ajax">&laquo; {_'framework.controls.paginatorControl.previousPage'}</a><li>
 	{/if}
 
 	{foreach $steps as $step}
 	{if $step == $paginator->page}
 	<li class="active"><a href="#">{$step}</a></li>
 	{else}
-	<li><a href="{link showPage, 'page' => $step}" n:class="$useAjax ? ajax">{$step}</a></li>
+	<li><a href="{link showPage!, 'page' => $step}" n:class="$useAjax ? ajax">{$step}</a></li>
 	{/if}
 	{if $iterator->nextValue > $step + 1}<li class="disabled"><a>…</a></li>{/if}
 	{/foreach}
@@ -19,7 +19,7 @@
 	{if $paginator->isLast()}
 	<li class="disabled"><a>{_'framework.controls.paginatorControl.nextPage'} &raquo;</a></li>
 	{else}
-	<li><a href="{link showPage, 'page' => $paginator->page + 1}" rel="next" n:class="$useAjax ? ajax">Next »</a></li>
+	<li><a href="{link showPage!, 'page' => $paginator->page + 1}" rel="next" n:class="$useAjax ? ajax">{_'framework.controls.paginatorControl.nextPage'} &raquo;</a></li>
 	{/if}
 </ul>
 {/if}

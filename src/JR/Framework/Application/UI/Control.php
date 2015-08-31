@@ -62,7 +62,7 @@ abstract class Control extends NetteControl
 		
 		if (!$this->template->getFile()) {
 			$declaringClass = $this->getReflection()->getMethod('formatTemplateFiles')->getDeclaringClass();
-			throw new FileNotFoundException('Missing template file for ' . get_class($this) . ' component. Check ' . $declaringClass . '::formatTemplateFiles() method to find out possible directories where template file is expected.');
+			throw new FileNotFoundException('Missing template file for ' . get_called_class() . ' component. Check ' . $declaringClass . '::formatTemplateFiles() method to find out possible directories where template file is expected.');
 		}
 	}
 	

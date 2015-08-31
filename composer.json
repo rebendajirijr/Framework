@@ -11,7 +11,7 @@
     "minimum-stability": "dev",
     "require": {
 		"php": ">= 5.4.4",
-		"nette/nette": "~2.3@dev",
+		"nette/nette": "~2.3.5",
 		"nette/tester": "~1.0",
 		"goodby/csv": "dev-master",
 		"tharos/leanmapper": "dev-master",
